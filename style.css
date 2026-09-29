@@ -1,0 +1,126 @@
+/* Базовые стили для светлой темы (по умолчанию) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333333; /* Темный текст на светлом фоне */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* Плавный переход для фона и цвета текста */
+    transition: background-color 0.4s ease, color 0.4s ease; 
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    /* Плавный переход для карточки */
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* ========================================== */
+/* СТИЛИ ДЛЯ ТЁМНОЙ ТЕМЫ                      */
+/* Если у body появится класс .dark-theme, сработают эти правила: */
+
+body.dark-theme {
+    background-color: #121212; /* Почти черный фон */
+    color: #ffffff;            /* Белый текст */
+}
+
+body.dark-theme .card {
+    background-color: #1e1e1e; /* Темно-серая карточка */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Более глубокая тень */
+}
+
+body.dark-theme button {
+    background-color: #ffc107; /* Желтая кнопка в темной теме */
+    color: #121212;            /* Черный текст на кнопке */
+}
+
+body.dark-theme button:hover {
+    background-color: #e0a800;
+}
+/* Стили для контейнера формы */
+.form-container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Отступ между полем ввода и кнопкой */
+}
+
+/* Красивое поле ввода */
+input[type="text"] {
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.4s, color 0.4s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff; /* Подсветка при клике */
+}
+
+#save-name-btn {
+    background-color: #28a745; /* Сделаем кнопку сохранения зеленой */
+}
+
+#save-name-btn:hover {
+    background-color: #218838;
+}
+
+/* Изменения формы для ТЁМНОЙ ТЕМЫ */
+body.dark-theme input[type="text"] {
+    background-color: #333333;
+    border-color: #555555;
+    color: #ffffff;
+}
+
+body.dark-theme #save-name-btn {
+    background-color: #28a745; /* Оставим зелёной или можно изменить */
+    color: white;
+}
+/* Контейнер для заголовка и кнопки выхода */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* Стили для кнопки выхода (крестика) */
+#logout-btn {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: none; /* ПО УМОЛЧАНИЮ СКРЫТА, пока мы Гость */
+}
+
+#logout-btn:hover {
+    transform: scale(1.2); /* Слегка увеличивается при наведении */
+}
